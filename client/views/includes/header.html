@@ -1,0 +1,12 @@
+<template name="header">
+    <nav class="nav-wrapper purple darken-4">
+        <div class="container">
+            <a class="brand-logo" href="/">Morgan's Rewards</a>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+                <ul class="right">
+                    <li class="active"><a class="waves-effect waves-light" href="{{pathFor 'rewardsList'}}">Rewards</a></li>
+                    {{#if currentUser}}<li><a class="waves-effect waves-light modal-trigger" id="login-button">Login/Sign-up</a></li>{{/if}}
+                </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+</template>

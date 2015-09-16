@@ -1,0 +1,3 @@
+Template.addgoalForm.onRendered(function() {
+
+});

@@ -1,0 +1,3 @@
+Template.loginForm.onRendered(function() {
+
+});

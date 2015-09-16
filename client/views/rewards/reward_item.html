@@ -1,0 +1,23 @@
+<template name="rewardItem">
+    <div class="col s3">
+        <div class="card">
+            <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+            <div class="avatar">
+                <img src="" alt="" />
+            </div>
+            <div class="content">
+                <p>{{name}}<br></p>
+                {{#if isEarned 1}}
+                <p><button type="button" class="btn btn-danger noyoudidnt" data-toggle="modal" data-target="#ididit-modal">No you didn't.</button></p>
+                {{else}}
+                <p><button type="button" class="btn btn-success ididthis" data-toggle="modal" data-target="#ididit-modal">I did it!</button></p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    {{#if isEarned}}
+        <img class="src-image" src="{{image.url}}" />
+    {{else}}
+        <img class="src-image" src="/images/mystery.jpg" />
+    {{/if}}
+</template>

@@ -1,0 +1,31 @@
+<template name="addgoalForm">
+    {{#autoForm id="addgoalForm" class="modal fade addgoal-modal" role="dialog" aria-labelledby="addgoalModal" aria-hidden="true" type="insert" collection="Rewards"}}
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add New Goal</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group {{#if afFieldIsInvalid name='name'}}has-error{{/if}}">
+                    <label class="control-label">{{afFieldLabelText name='name'}}</label>
+                    {{> afFieldInput name='name'}}
+                    {{#if afFieldIsInvalid name='name'}}
+                        <span class="help-block">{{{afFieldMessage name='name'}}}</span>
+                    {{/if}}
+                </div>
+                <div class="form-group {{#if afFieldIsInvalid name='trophy'}}has-error{{/if}}">
+                    <label class="control-label">{{afFieldLabelText name='trophy'}}</label>
+                    {{> afFieldInput name='trophy' type='cfs-file' collection='images'}}
+                    {{#if afFieldIsInvalid name='trophy'}}
+                        <span class="help-block">{{{afFieldMessage name='trophy'}}}</span>
+                    {{/if}}
+                </div>
+                <div class="form-group">
+                    <button type="submit">Add Goal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/autoForm}}
+</template>

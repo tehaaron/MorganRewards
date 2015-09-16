@@ -1,0 +1,21 @@
+<template name="ididitForm">
+  <div id="ididit-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="ididitModal" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4 class="modal-title">Enter Password</h4>
+              </div>
+              <div class="modal-body">
+                  <form class="form enterPassword">
+                      <div class="form-group {{#if passwordError}}has-error{{/if}}">
+                          <label for="ididitPW" class="control-label">Password:</label>
+                          <input type="password" class="form-control" id="ididitPW" name="attemptedPW" placeholder="">
+                            <span class="help-block">{{passwordError}}</span>
+                      </div>
+                      <button type="submit" class="btn btn-success">Submit</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</template>

@@ -1,0 +1,9 @@
+- form validation moved to simple schema
+    - update validation errors to show in forms with material design theme
+- Add goal button re-added somewhere
+    - in front of existing goals?
+    - at the end of the goals list?
+    - header?
+    - fixed to the edge and slide-out form?
+- tie users to goals
+    - update templates for user roles/permissions
